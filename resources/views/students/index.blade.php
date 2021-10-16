@@ -23,6 +23,7 @@
                                 <th>NIM</th>
                                 <th>Name</th>
                                 <th>class</th>
+                                <th>Department</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -32,6 +33,7 @@
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
                                 <td>{{ $s->class }}</td>
+                                <td>{{ $s->department }}</td>
                                 <td>
                                 <form action="/students/{{$s->id}}" method="post"> 
                                     <a href="/students/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
@@ -43,9 +45,7 @@
                             </tr>
                             @endforeach 
                         </tbody>
-                    </table>
-
-                    
+                    </table>                  
                 </div>
             </div>
         </div>
