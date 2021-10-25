@@ -16,6 +16,17 @@
 
                     <a href="/students/create" class="btn btn-primary">Add Data</a> 
                     <br><br> 
+                    <!--fitur search data-->
+                    <div class="row">
+                        <form action="/students" class="form-inline" method="get">
+                            <div class="form-group mx-sm-3 mb-3">
+                                <input name="keyword" type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary mb-3">Cari</button>
+                            </div> 
+                        </form>
+                    </div>
 
                     <table class="table table-responsive table-striped">
                         <thead>
@@ -40,6 +51,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" name="delete" class="btn btn-danger">Delete</button type=>
+                                    <a href="/students/{{$s->id}}" class="btn btn-warning">View</a>
                                 </form>     
                                 </td>
                             </tr>

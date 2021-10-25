@@ -52,12 +52,16 @@
                                 </li>
                             @endif
                         @else
-                            <!-- Halaman home dan Students-->
+                            <!-- Halaman home , user, Students-->
                             <li class="nav-item">
                                 <a class="nav-link" href="/home">Home</a>
                             </li>
+                            <!-- Panggil path(user) pada route-->
                             <li class="nav-item">
-                                <a class="nav-link" href="/students">CRUD</a>
+                                <a class="nav-link" href="/users">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/students">Students</a>
                             </li>
                             
                             <li class="nav-item dropdown">
