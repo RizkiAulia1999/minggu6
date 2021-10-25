@@ -46,6 +46,13 @@
                                 </li>
                             @endif
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/students">Students</a>
+                            </li>
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -56,7 +63,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/home">Home</a>
                             </li>
-                            <!-- Panggil path(user) pada route-->
+
                             <li class="nav-item">
                                 <a class="nav-link" href="/users">User</a>
                             </li>

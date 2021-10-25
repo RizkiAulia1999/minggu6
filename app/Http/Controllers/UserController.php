@@ -48,7 +48,6 @@ class UserController extends Controller
             // if true, redirect to index
             return redirect()->route('users.index')
                 ->with('success', 'Add data success!');
-
     }
 
     /**
@@ -73,7 +72,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         return view('users.edit',['user'=>$user]);
-
     }
 
     /**
