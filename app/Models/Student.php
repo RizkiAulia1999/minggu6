@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $fillable = ['nim','name','class', 'department','phone_number'];
+    // relasi pada model Student dengan Kelas
+    protected $fillable = [ 'nim','class_id','name','department', 'phone_number'];
+    
+        public function kelas(){
+            //satu Student memiliki satu Kelas. serta mendefinisikan foreign key
+            return $this->belongsTo(Kelas::class, 'class_id');
+        } 
 }

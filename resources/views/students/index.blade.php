@@ -13,9 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <a href="/students/create" class="btn btn-primary">Add Data</a> 
-                    <br><br> 
+ 
                     <!--fitur search data-->
                     <div class="row">
                         <form action="/students" class="form-inline" method="get">
@@ -27,6 +25,9 @@
                             </div> 
                         </form>
                     </div>
+
+                    <a href="/students/create" class="btn btn-primary">Add Data</a> 
+                    <br><br>
 
                     <table class="table table-responsive table-striped">
                         <thead>
@@ -43,15 +44,15 @@
                             <tr>
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
-                                <td>{{ $s->class }}</td>
+                                <td>{{ $s->kelas->class_name }}</td> 
                                 <td>{{ $s->department }}</td>
                                 <td>
                                 <form action="/students/{{$s->id}}" method="post"> 
+                                    <a href="/students/{{$s->id}}" class="btn btn-success">Show</a>
                                     <a href="/students/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" name="delete" class="btn btn-danger">Delete</button type=>
-                                    <a href="/students/{{$s->id}}" class="btn btn-warning">View</a>
                                 </form>     
                                 </td>
                             </tr>
