@@ -15,4 +15,8 @@ class Student extends Model
             //satu Student memiliki satu Kelas. serta mendefinisikan foreign key
             return $this->belongsTo(Kelas::class, 'class_id');
         } 
+        public function course(){
+            //BANYAK Student menempuk banyak matkul. 
+            return $this->belongsToMany(Course::class)->withPivot('nilai');
+        } 
 }

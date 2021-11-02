@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-header">{{ __('STUDENT DATA') }}</div>
 
@@ -26,7 +26,7 @@
                         </form>
                     </div>
 
-                    <a href="/students/create" class="btn btn-primary">Add Data</a> 
+                    <a href="/students/create" class="btn btn-primary">Input Mahasiswa</a> 
                     <br><br>
 
                     <table class="table table-responsive table-striped">
@@ -52,8 +52,9 @@
                                     <a href="/students/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" name="delete" class="btn btn-danger">Delete</button type=>
-                                </form>     
+                                    <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                                    <a href="/students/{{$s->id}}/nilai" class="btn btn-success">Nilai</a>   
+                                </form>    
                                 </td>
                             </tr>
                             @endforeach 

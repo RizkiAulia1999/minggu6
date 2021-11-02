@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Kelas;
 
+
 class StudentController extends Controller
 {
     /**
@@ -130,7 +131,9 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('students.index');    
     }
-    public function search(){
- 
-    } 
+    public function nilai($id)
+    {
+        $student = Student::find($id);
+        return view('students.nilai', ['student'=>$student]);
+    }
 }
