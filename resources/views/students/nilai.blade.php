@@ -21,7 +21,7 @@
                                 </tr>
                         </thead>
                         <tbody>
-                            @foreach($student as $s)
+                            @foreach($student->courses as $s)
                             <tr>
                                 <td>{{ $s->course_name }}</td>
                                 <td>{{ $s->sks }}</td>

@@ -12,7 +12,7 @@ class Course extends Model
 
     //relasi many to many
 
-    public function student(){
+    public function students(){
         return $this->belongsToMany(Student::class);
     }
 }

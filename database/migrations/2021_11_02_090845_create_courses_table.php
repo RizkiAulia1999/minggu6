@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->integer('sks');
             $table->integer('semester');
             $table->timestamps();
-         });
+        });
     }
 
     /**
