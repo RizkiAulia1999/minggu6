@@ -151,11 +151,9 @@ class StudentController extends Controller
         return view('students.nilai', ['student'=>$student]);
     }
 
-   /* public function report($id)
-    {
+    public function report($id){
         $student = Student::find($id);
-        $pdf = PDF::loadview('students.report',['student'=>$student])
+        $pdf = PDF::loadview('students.report',['student'=>$student]);
         return $pdf->stream();
-
-    }*/
+    } 
 }
