@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('DETAIL STUDENT') }}</div>
+                <div class="card-header">{{ $student->nim }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,7 +15,8 @@
                     @endif
 
                     <!--Menampilkan View pada baris student berdasarkan ID-->
-                    <div class="card-header">{{ $student->nim }}</div>
+                    <img width="150px" src="{{asset('storage/'.$student->photo)}}"><br><br>
+                  
                         <div class="card-body">
                             Name : {{ $student->name }} <br>
                             Class : {{ $student->kelas->class_name }} <br>
@@ -24,7 +25,7 @@
                             Created at : {{ $student->created_at }} <br>
                             Updated at : {{ $student->updated_at }} <br>
                         </div>
-                    </div>         
+                           
                 </div>
             </div>
         </div>
